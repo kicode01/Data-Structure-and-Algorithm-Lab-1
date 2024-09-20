@@ -1,0 +1,26 @@
+print("Temperature Converter")
+
+# Prompt the user to enter a temperature value
+temperature = float(input("Enter the temperature: "))
+
+# Display the conversion options to the user
+print("Type of Conversion:\n - Type 'C' to convert from Celsius to Fahrenheit\n - Type 'F' to convert from Fahrenheit to Celsius")
+
+# Get the conversion type from the user and normalize the input
+conversion_type = input("Enter: ").upper().strip()
+
+# Check if the user selected Celsius to Fahrenheit conversion
+if conversion_type == 'C':
+    # Convert the temperature from Celsius to Fahrenheit
+    result = (temperature * 9/5) + 32
+    # Display the result
+    print(f"{temperature}°C is {result:.2f}°F")
+# Check if the user selected Fahrenheit to Celsius conversion
+elif conversion_type == 'F':
+    # Convert the temperature from Fahrenheit to Celsius
+    result = (temperature - 32) * 5/9
+    # Display the result
+    print(f"{temperature}°F is {result:.2f}°C")
+# Handle invalid conversion type selection
+else:
+    print("Invalid conversion type selected.")
