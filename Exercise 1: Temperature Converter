@@ -7,7 +7,7 @@ temperature = float(input("Enter the temperature: "))
 print("Type of Conversion:\n - Type 'C' to convert from Celsius to Fahrenheit\n - Type 'F' to convert from Fahrenheit to Celsius")
 
 # Get the conversion type from the user and normalize the input
-conversion_type = input("Enter: ").upper().strip()
+conversion_type = input("Enter your choice: ").upper().strip()
 
 # Check if the user selected Celsius to Fahrenheit conversion
 if conversion_type == 'C':
