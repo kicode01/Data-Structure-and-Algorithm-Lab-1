@@ -1,0 +1,24 @@
+print("Diamond Shape Generator")
+
+# Set the value of n to an odd integer
+n = int(input("Enter an odd integer: "))
+
+# Check if n is an even number
+if n % 2 == 0:
+    # Print a message if n is even
+    print("Please provide an odd integer.")
+else:
+    # Loop through each number from 0 to n-1
+    for i in range(n):
+        # Check if the current index is in the first half of the diamond
+        if i <= n // 2:
+            # Calculate the number of spaces and stars for the upper half of the diamond
+            spaces = n // 2 - i
+            stars = 2 * i + 1
+        else:
+            # Calculate the number of spaces and stars for the lower half of the diamond
+            spaces = i - n // 2
+            stars = 2 * (n - i) - 1
+        
+        # Print the spaces and stars
+        print(' ' * spaces + '*' * stars)
