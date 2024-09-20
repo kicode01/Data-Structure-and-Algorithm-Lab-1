@@ -23,4 +23,4 @@ elif conversion_type == 'F':
     print(f"{temperature}°F is {result:.2f}°C")
 # Handle invalid conversion type selection
 else:
-    print("Invalid conversion type selected.")
+    print("Invalid conversion type selected. Please enter 'C' or 'F' only.")
