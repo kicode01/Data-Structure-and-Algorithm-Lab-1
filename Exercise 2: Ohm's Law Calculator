@@ -1,0 +1,51 @@
+print("Ohm's Law Calculator")
+
+# Ask the user what they would like to calculate
+print("What would you like to calculate?")
+print("- Type 'V' for Voltage\n- Type 'I' for Current\n- Type 'R' for Resistance")
+
+# Get the user's choice
+choice = input("Enter your choice: ").upper().strip()
+
+# If the user chose to calculate voltage
+if choice == 'V':
+    # Get the current and resistance from the user
+    current = float(input("Enter the current (in amperes): "))
+    resistance = float(input("Enter the resistance (in ohms): "))
+    # Calculate the voltage using Ohm's Law
+    voltage = current * resistance
+    # Print the result
+    print(f"The voltage is {voltage} volts.")
+        
+# If the user chose to calculate current
+elif choice == 'I':
+    # Get the voltage and resistance from the user
+    voltage = float(input("Enter the voltage (in volts): "))
+    resistance = float(input("Enter the resistance (in ohms): "))
+    # Check if resistance is zero to avoid division by zero
+    if resistance == 0:
+        print("Error: Resistance cannot be zero.")
+    else:
+        # Calculate the current using Ohm's Law
+        current = voltage / resistance
+        # Print the result
+        print(f"The current is {current} amperes.")
+        
+# If the user chose to calculate resistance
+elif choice == 'R':
+    # Get the voltage and current from the user
+    voltage = float(input("Enter the voltage (in volts): "))
+    current = float(input("Enter the current (in amperes): "))
+    # Check if current is zero to avoid division by zero
+    if current == 0:
+        print("Error: Current cannot be zero.")
+    else:
+        # Calculate the resistance using Ohm's Law
+        resistance = voltage / current
+        # Print the result
+        print(f"The resistance is {resistance} ohms.")
+        
+# If the user entered an invalid choice
+else:
+    print("Invalid choice. Please select between 'V', 'I', or 'R' only.")
+    
